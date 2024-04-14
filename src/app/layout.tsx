@@ -1,8 +1,10 @@
+import Header from "@/app/_components/Header";
 import "@/styles/globals.css";
 
-import { Inter } from "next/font/google";
+import { Roboto_Slab } from "next/font/google";
+import { type ReactElement } from "react";
 
-const inter = Inter({
+const Roboto = Roboto_Slab({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -13,14 +15,13 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }): ReactElement {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <body className={`font-sans ${Roboto.variable} bg-[#000C36]`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
