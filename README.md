@@ -27,3 +27,58 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+to start:
+
+```
+nvm use
+pnpm install
+
+pnpm run dev
+```
+
+Note:
+
+- node is locked at 18.0.0 or higher
+- pnpm is locked at 4.0.2 or higher
+
+```
+"node": ">=18.0.0",
+"pnpm": ">=4.0.2"
+```
+
+##### lint staged:
+
+##### about commits:
+
+    commits is following the [conventional commits](https://www.npmjs.com/package/@commitlint/
+    config-conventional) where you can only pass the values:
+
+(case sensitive)
+
+```
+  'build',
+  'chore',
+  'ci',
+  'docs',
+  'feat',
+  'fix',
+  'perf',
+  'refactor',
+  'revert',
+  'style',
+  'test'
+```
+
+example:
+
+```
+echo "foo: some message" # fails
+echo "FIX: some message" # fails
+echo "fix: some message" # passes
+```
+
+stacks used:
+
+- nextJs - [T3 Stack](https://create.t3.gg/)
+- openAI - [openAi api docs](https://platform.openai.com/docs/introduction)
