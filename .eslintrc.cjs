@@ -27,6 +27,8 @@ const config = {
         "plugin:tailwindcss/recommended",
         "plugin:react/recommended",
         "plugin:@next/next/recommended",
+        "eslint:recommended",
+        "next",
       ],
       rules: {
         "no-restricted-imports": "off",

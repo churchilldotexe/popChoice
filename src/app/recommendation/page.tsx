@@ -8,14 +8,14 @@ export default function RecommendationPage(): ReactElement {
     <Main className=" text-white">
       <div className="flex flex-col items-center gap-y-8">
         <div className="flex flex-col space-y-6">
-          <h1 className="text-center text-3xl font-bold">School of Rock</h1>
-          <p className="w-[40ch] text-lg">
+          <h1 className="text-center text-3xl font-bold lg:text-5xl">School of Rock</h1>
+          <p className="w-[40ch] text-lg lg:text-xl">
             A fun and stupid movie about a wannabe rocker turned fraud substitute teacher forming a rock band with his
             students to win the Battle of the Bands
           </p>
         </div>
       </div>
-      <Button type="button" className="mt-10">
+      <Button type="button" className="mt-10 lg:text-4xl">
         <Link href="/">Go Again</Link>
       </Button>
     </Main>
