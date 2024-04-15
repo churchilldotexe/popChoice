@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }): React
   return (
     <html lang="en">
       <body className={`font-sans ${Roboto.variable} bg-[#000C36]`}>
-        <Toaster closeButton position="top-center" />
+        <Toaster closeButton position="top-center" richColors theme="dark" />
         <Header />
         {children}
       </body>

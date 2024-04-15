@@ -4,21 +4,7 @@ An Ai movie recommendation for you to enjoy!
 
 [![popcorn logo](/public/popChoice.svg)](https://pop-choice-ten.vercel.app/)
 
-## TODO
-
-- [x] create homepage and recommendation page
-- [x] mock data
-- [x] handle form with server action
-- [x] connect db perform pg vector search with the query
-- [] connect openAI chat completion
-- [] push response to an array
-- [] get response via json passed it in as a query in the link (try to make link props)
-- [] handle loading state in both pages (skeleton loading)
-- []
-- []
-- []
-
-to start:
+##### to start:
 
 ```
 nvm use
@@ -39,9 +25,12 @@ Note:
 
 ##### lint staged:
 
+there will be a linting and ts check every commit to ensure a typesafe codebase before pushing the code to github
+
 ##### about commits:
 
-    commits is following the [conventional commits](https://www.npmjs.com/package/@commitlint/
+    commits is following the [npm package](https://www.npmjs.com/package/@commitlint/
+    [conventional commits docs](https://www.conventionalcommits.org/en/v1.0.0/#summary)
     config-conventional) where you can only pass the values:
 
 (case sensitive)
@@ -75,3 +64,5 @@ stacks used:
 - JinaAI - for embeddings. [docs](https://jina.ai/embeddings/#apiform)
 - supabase - for Database and Semantic Search. [Storing OpenAI in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
 - [Tailwind CSS](https://tailwindcss.com)
+
+A solo-project from [scrimba](https://scrimba.com/)

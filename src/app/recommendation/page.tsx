@@ -3,20 +3,21 @@ import Main from "@/component/Main";
 import Link from "next/link";
 import { type ReactElement } from "react";
 
-export default function RecommendationPage(): ReactElement {
+export default function RecommendationPage({
+  searchParams: { t: title, s: summary },
+}: {
+  searchParams: { t: string; s: string };
+}): ReactElement {
   return (
-    <Main className=" text-white">
-      <div className="flex flex-col items-center gap-y-8">
+    <Main className=" max-w-prose text-white">
+      <div className="flex flex-col items-center">
         <div className="flex flex-col space-y-6">
-          <h1 className="text-center text-3xl font-bold lg:text-5xl">School of Rock</h1>
-          <p className="w-[40ch] text-lg lg:text-xl">
-            A fun and stupid movie about a wannabe rocker turned fraud substitute teacher forming a rock band with his
-            students to win the Battle of the Bands
-          </p>
+          <h1 className="text-center text-3xl font-bold lg:text-5xl">{title}</h1>
+          <p className="mx-auto w-full  text-lg lg:text-xl">{summary}</p>
         </div>
       </div>
       <Button type="button" className="mt-10 lg:text-4xl">
-        <Link href="/">Go Again</Link>
+        <Link href="../">Go Again</Link>
       </Button>
     </Main>
   );

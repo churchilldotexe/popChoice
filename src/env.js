@@ -8,10 +8,11 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
-    SUPABASE_API_KEY: z.string(),
-    SUPABASE_URL: z.string().url(),
-    JINA_AI_API_KEY: z.string(),
-    OPENAI_API_KEY: z.string(),
+    SUPABASE_API_KEY: z.string().min(1),
+    SUPABASE_URL: z.string().url().min(1),
+    JINAAI_URL: z.string().url().min(1),
+    JINA_AI_API_KEY: z.string().min(1),
+    OPENAI_API_KEY: z.string().min(1),
   },
 
   /**
@@ -31,6 +32,7 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     SUPABASE_API_KEY: process.env.SUPABASE_API_KEY,
     SUPABASE_URL: process.env.SUPABASE_URL,
+    JINAAI_URL: process.env.JINAAI_URL,
     JINA_AI_API_KEY: process.env.JINA_AI_API_KEY,
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,

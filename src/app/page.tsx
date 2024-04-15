@@ -1,6 +1,6 @@
 "use client";
 
-import { createMovieRecom } from "@/app/_lib/action";
+import { createMovieRecommendation } from "@/app/_lib/action";
 import Button from "@/component/Button";
 import Main from "@/component/Main";
 import { type ReactElement } from "react";
@@ -8,7 +8,7 @@ import { useFormState } from "react-dom";
 import { toast } from "sonner";
 
 export default function HomePage(): ReactElement {
-  const [state, formAction] = useFormState(createMovieRecom, { message: "" });
+  const [state, formAction] = useFormState(createMovieRecommendation, { message: "" });
   if (state.error !== undefined) {
     toast.error(state.error);
   }
@@ -25,9 +25,10 @@ export default function HomePage(): ReactElement {
             name="favorite"
             className="  resize-none rounded-lg bg-[#3B4877] p-3 text-sm font-light lg:text-base"
             placeholder="The Shawshank Redemption
-Because it taught me to never give up hope no matter how hard life gets"
+    Because it taught me to never give up hope no matter how hard life gets"
             rows={3}
             required
+            spellCheck
           />
         </div>
         <div className="flex w-full flex-col space-y-3">
@@ -41,6 +42,7 @@ Because it taught me to never give up hope no matter how hard life gets"
             placeholder="I want to watch movies that were released after 1990"
             rows={3}
             required
+            spellCheck
           />
         </div>
         <div className="flex w-full flex-col space-y-3">
@@ -54,6 +56,7 @@ Because it taught me to never give up hope no matter how hard life gets"
             placeholder="I want to watch something stupid and fun"
             rows={3}
             required
+            spellCheck
           />
         </div>
         <Button type="submit" className="mt-5">

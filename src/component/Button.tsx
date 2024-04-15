@@ -29,7 +29,8 @@ export default function Button({ children, className, type, ...props }: ButtonPr
       {...props}
       className={cn(
         "w-full rounded-lg bg-green-400 px-6 py-4 text-3xl font-bold text-slate-950 transition-all hover:scale-105 focus-visible:scale-105 active:scale-95",
-        className
+        className,
+        pending && "cursor-wait hover:scale-100 focus-visible:scale-100 active:scale-100"
       )}
       disabled={pending}
     >
